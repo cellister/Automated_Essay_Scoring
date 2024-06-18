@@ -10,6 +10,14 @@ The first automated essay scoring competition to tackle automated grading of stu
 
 The goal of this competition is to train a model to score student essays. Your efforts are needed to reduce the high expense and time required to hand grade these essays. Reliable automated techniques could allow essays to be introduced in testing, a key indicator of student learning that is currently commonly avoided due to the challenges in grading.(Kaggle)
 
+Based on this analysis, which is explained below, are the following three recommendations:
+
+1. Adopt the BERT-Based Model
+2. Address Overfitting in Neural Network Models
+3. Increase Training Data Size
+
+
+
 # Business Problem
 
 The Educational Testing Industry is developing a tool to assist with evaluating student learning and performance on short answer responses and essays on standardized tests. Manual grading of essays is not only time-consuming but also resource-intensive, making it difficult for educators to provide timely feedback, especially in underserved communities. Automated Writing Evaluation (AWE) systems offer a solution by efficiently scoring essays and supplementing educators' efforts, allowing students to receive regular and prompt feedback on their writing.
@@ -57,7 +65,7 @@ List of Feature (or attributes, either work) Descriptions
 - Stop words were removed to improve the quality of the text data.
 - Histograms and bar plots were used to visualize the score distribution and inform preprocessing steps.
 
-<img src="Images/general/grade_distribution.png" alt="other_image" style="width: 550px; display: block; margin: center;">
+<img src="Images/general/grade_distribution.png" alt="other_image" style="width: 1000px; display: block; margin: center;">
 
 ## Modeling
 
@@ -66,14 +74,15 @@ List of Feature (or attributes, either work) Descriptions
 - BERT Embeddings with Neural Network
 
 Topic Modeling with K-means Clustering:
-<img src="Images/tf_idf_kmeans/essay_cluster.png" alt="other_image" style="width: 550px; display: block; margin: center;">
+<img src="Images/tf_idf_kmeans/essay_cluster.png" alt="other_image" style="width: 1000px; display: block; margin: center;">
+<br>
 <br>
 Sample, Essay Topic 7 Word Cloud:
-<img src="Images/tf_idf_kmeans/word_cloud_T7.png" alt="other_image" style="width: 550px; display: block; margin: center;">
+<img src="Images/tf_idf_kmeans/word_cloud_T7.png" alt="other_image" style="width: 1000px; display: block; margin: center;">
 <br>
-Sample, Essay Topic 7 Bar Chart
-<img src="Images/tf_idf_kmeans/bar_chart_T7.png" alt="other_image" style="width: 550px; display: block; margin: center;">
-
+<br>
+Sample, Essay Topic 7 Bar Chart:
+<img src="Images/tf_idf_kmeans/bar_chart_T7.png" alt="other_image" style="width: 1000px; display: block; margin: center;">
 
 # Evaluation
 
