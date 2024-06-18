@@ -12,20 +12,20 @@ The goal of this competition is to train a model to score student essays. Your e
 
 # Business Problem
 
-Automated Essay Scoring (AES) has become an increasingly critical tool for evaluating student learning and performance. Manual grading of essays is not only time-consuming but also resource-intensive, making it difficult for educators to provide timely feedback, especially in underserved communities. Automated Writing Evaluation (AWE) systems offer a solution by efficiently scoring essays and supplementing educators' efforts, allowing students to receive regular and prompt feedback on their writing.
+The Educational Testing Industry is developing a tool to assist with evaluating student learning and performance on short answer responses and essays on standardized tests. Manual grading of essays is not only time-consuming but also resource-intensive, making it difficult for educators to provide timely feedback, especially in underserved communities. Automated Writing Evaluation (AWE) systems offer a solution by efficiently scoring essays and supplementing educators' efforts, allowing students to receive regular and prompt feedback on their writing.
 
+This project supports the technical development team to explore several key model training and performance questions:
 
-This project will explore several key model training and performance questions:
-
-What are the optimal hyperparameters for the models tested?
-How do different vectorization techniques (e.g., TF-IDF vs. BERT) impact the model's performance?
-What is the effect of different model architectures on grading accuracy?
+1. What are the optimal hyperparameters for the models tested?
+2. How do different vectorization techniques (e.g., TF-IDF vs. BERT) impact the model's performance?
+3. What is the effect of different model architectures on grading accuracy?
 
 # Data Understanding
 
 **Dataset Description**
 
-[Kaggle Dataset] (https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2/data). The competition dataset comprises about 24000 student-written argumentative essays. Each essay was scored on a scale of 1 to 6 (Link to the Holistic Scoring Rubric rubric). The goal is to predict the score an essay received from its text.
+[Kaggle Dataset](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2/data) <br>
+The competition dataset comprises about 24000 student-written argumentative essays. Each essay was scored on a scale of 1 to 6 (Link to the Holistic Scoring Rubric rubric). The goal is to predict the score an essay received from its text.
 
 
 test.csv - The essays to be used as test data. Contains the same fields as train.csv, aside from exclusion of score. (Note: The rerun test set has approximately 8k observations.)
@@ -46,22 +46,33 @@ List of Feature (or attributes, either work) Descriptions
 
 - [Database: Open Database, Contents: Copyright Original Authors](https://creativecommons.org/licenses/by-nc/4.0/)
 
-
 # Methodology
+
+<img src="Images/general/flowchart.jpg" alt="other_image" style="width: 300px; display: block; margin: center;">
 
 ## Data Preparation
 
 **Data Cleaning and Preprocessing**
-- Missing values and placeholders were identified and removed from the dataset.
 - Tokenization and text normalization were performed, including handling contractions, punctuation, and numeric values.
 - Stop words were removed to improve the quality of the text data.
 - Histograms and bar plots were used to visualize the score distribution and inform preprocessing steps.
+
+<img src="Images/general/grade_distribution.png" alt="other_image" style="width: 550px; display: block; margin: center;">
 
 ## Modeling
 
 - TF-IDF Vectorization with Neural Network
 - TF-IDF Vectorization with K-Means Clustering
 - BERT Embeddings with Neural Network
+
+Topic Modeling with K-means Clustering:
+<img src="Images/tf_idf_kmeans/essay_cluster.png" alt="other_image" style="width: 550px; display: block; margin: center;">
+<br>
+Sample, Essay Topic 7 Word Cloud:
+<img src="Images/tf_idf_kmeans/word_cloud_T7.png" alt="other_image" style="width: 550px; display: block; margin: center;">
+<br>
+Sample, Essay Topic 7 Bar Chart
+<img src="Images/tf_idf_kmeans/bar_chart_T7.png" alt="other_image" style="width: 550px; display: block; margin: center;">
 
 
 # Evaluation
@@ -83,31 +94,14 @@ List of Feature (or attributes, either work) Descriptions
 
 <strong>Essay Grading Model Comparison</strong>
 
-<style>
-    .heatMap {
-        width: 70%;
-        #text-align: center;
-    }
-    .heatMap th {
-        background: light grey;
-        #word-wrap: break-word;
-        text-align: center;
-    }
-    .heatMap tr:nth-child(1) { background: white; }
-    .heatMap tr:nth-child(2) { background: light grey; }
-    .heatMap tr:nth-child(3) { background: white; }
-    .heatMap tr:nth-child(4) { background: light grey; }
-</style>
+## Essay Grading Model Comparison
 
-<div class="heatMap">
+| Vector      | Model            | Sample Size | Train Accuracy | Test Accuracy | 
+| :---:       |    :----:        |  :---:      | :---:          | :----:        |
+| TF-IDF      | Neural Network   | 6000        | 88.5%          | 41.4%         | 
+| TF-IDF      | K-Means          | 6000        | 100.0%         | 41.2%         | 
+| BERT        | BERT             | 2000        | 84.6%          | 52.8%         |
 
-| Vector      | Model | Sample Size | Train Accuracy | Test Accuracy | 
-| :---:      |    :----: |  :---: | :---:    | :----:   |
-| TF-IDF  | Neural Network   | 6000    | 88.5%      | 41.4%      | 
-| TF-IDF  | K-Means   | 6000    |  100.0%     | 41.2%      | 
-| BERT| BERT   | 2000 |  84.6%      | 52.8%    |
-
-</div>
 
 #### **Key Findings:**
 <ol>
@@ -209,20 +203,15 @@ The data used in this analysis can be found in the ‘Data’ folder. Some data 
 │   ├── general
 ├── Reference
 │   ├── Kaggle_official
-│   ├── Old_notebooks
+│   ├── Notebooks
 │   ├── mac_environment P4P.yml
 │   ├── mac_environment.yml
-│   ├── Rubric_ Holistic Essay Scoring.pdf
-├── Data
-|   ├── train.csv
-│   ├── test.csv
-│   ├── sample_submission.csv
 ├── Project_PDFs
-│   ├── ML_Molecule_Structure_Predictor.pdf
-│   ├── ML_Molecule_Structure_Predictor.pdf
-│   └── github_repository.pdf
+│   ├── automated_essay_scoring_presentation.pdf
+│   ├── automated_essay_scoring_notebook.pdf
+│   └── AES_github_repository.pdf
 ├── .gitignore
-├── automated_essay_scoring_6_11.ipynb
+├── automated_essay_scoring_6_XX.ipynb
 └── README.md
 ```
 
