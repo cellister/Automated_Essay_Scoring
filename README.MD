@@ -109,7 +109,7 @@ Sample, Essay Topic 7 Bar Chart:
 | :---:       |    :----:        |  :---:      | :---:          | :----:        |
 | TF-IDF      | Neural Network   | 6000        | 88.5%          | 41.4%         | 
 | TF-IDF      | K-Means          | 6000        | 100.0%         | 41.2%         | 
-| BERT        | BERT             | 2000        | 84.6%          | 52.8%         |
+| <b>BERT</b>        | <b>BERT</b>             | <b>2000</b>        | <b>84.6%</b>         | <b>52.8%</b>        |
 
 
 #### **Key Findings:**
@@ -201,7 +201,7 @@ This 5-7 minute, non-technical [presentation PDF](https://github.com/cellister/A
 
 * **Data**
 
-The data used in this analysis can be found in the ‘Data’ folder. Some data can be found on the [Kaggle Dataset](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2/data).
+The data used in this analysis can be found in the [Kaggle Dataset](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2/data).
 
 ```
 
