@@ -103,14 +103,10 @@ Sample, Essay Topic 7 Bar Chart:
 
 <strong>Essay Grading Model Comparison</strong>
 
+
 ## Essay Grading Model Comparison
 
-| Vector      | Model            | Sample Size | Train Accuracy | Test Accuracy | 
-| :---:       |    :----:        |  :---:      | :---:          | :----:        |
-| TF-IDF      | Neural Network   | 6000        | 88.5%          | 41.4%         | 
-| TF-IDF      | K-Means          | 6000        | 100.0%         | 41.2%         | 
-| <b>BERT</b>        | <b>BERT</b>             | <b>2000</b>        | <b>84.6%</b>         | <b>52.8%</b>        |
-
+<img src="Images/general/highlighted_summary_table.png" alt="other_image" style="width: 1000px; display: block; margin: center;">
 
 #### **Key Findings:**
 <ol>
