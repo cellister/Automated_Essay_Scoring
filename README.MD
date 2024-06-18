@@ -191,13 +191,13 @@ Email address: cellister at gmail .com
 
 # Repository Structure
 
-* **Jupyter Notebook**
+* **Notebook**
 
-The [Jupyter Notebook](https://github.com/cellister/notebook.pdf) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
+The [Google Colab Notebook](https://github.com/cellister/Automated_Essay_Scoring/blob/main/automated_essay_scoring_06_18.ipynb), is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights. [notebook PDF](https://github.com/cellister/Automated_Essay_Scoring/blob/main/Project_PDFs/automated_essay_scoring_notebook.pdf)
 
 * **Presentation**
 
-This 5-7 minute, non-technical [presentation](https://github.com/cellister/presentation.pdf) was made in [Canva](https://www.canva.com/design/DAGH1bsu130/EECBDNF5RDqHKnpQhlo84g/edit?utm_content=DAGH1bsu130&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
+This 5-7 minute, non-technical [presentation PDF](https://github.com/cellister/Automated_Essay_Scoring/blob/main/Project_PDFs/automated_essay_scoring_presentation.pdf) was made in [Canva](https://www.canva.com/design/DAGH1bsu130/EECBDNF5RDqHKnpQhlo84g/edit?utm_content=DAGH1bsu130&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
 
 * **Data**
 
